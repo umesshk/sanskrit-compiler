@@ -1,0 +1,4 @@
+LOAD 3
+STORE x
+PRINT None
+PRINT x

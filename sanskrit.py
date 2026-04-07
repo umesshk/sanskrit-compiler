@@ -26,13 +26,13 @@ for stmt in ast:
 #print("\n--- TAC ---")
 #for line in tac:
 #   print(line)
+asm_code = generate_target(tac)
 
-target = generate_target(tac)
+with open("output.asm", "w") as f:
+    for line in asm_code:
+        f.write(line + "\n")
 
-#print("\n--- TARGET CODE ---")
-#for line in target:
-#    print(line)
-
+print("Assembly file generated: output.asm")
 
 #print("\n--- EXECUTION ---")
 execute(ast)
